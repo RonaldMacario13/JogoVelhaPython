@@ -8,10 +8,6 @@ def criar_quadro():
     mostrar_quadro(quadro_linha)
     return(quadro_linha)
 
-# def atualizar_quadro(quadro_atualizado):
-#     for linha in quadro_atualizado:
-#         print("|".join(linha))
-
 def jogada(pos_i, pos_j, jogador = 'x'):
     global quadro
     if quadro [pos_i][pos_j] in ['_', ' ']:
