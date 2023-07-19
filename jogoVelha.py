@@ -42,3 +42,12 @@ def verifcar_vencendor():
     else:
          return False
 
+def receber_jogada(jogador):
+    status = False
+    while not status:
+        print(f"Jogador: {jogador}")
+        linha = int(input("Digite a linha: "))
+        coluna = int(input("Digite a coluna: "))
+        status = jogada(linha, coluna, jogador)
+    print("Jogada realizada!!")
+
