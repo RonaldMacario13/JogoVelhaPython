@@ -22,3 +22,23 @@ def jogada(pos_i, pos_j, jogador = 'x'):
         print("Posição está ocupada! Tente novamente.")
         return False
 
+def verifcar_vencendor():
+    global quadro
+
+    for i in range(3):
+        if quadro[i][2] in ['x', 'o'] and quadro[i][0] == quadro[i][1] == quadro[i][2]:
+            print(f"jogador {quadro[i][0]} venceu!")
+            return True
+
+        if quadro[2][i] in ['x', 'o'] and quadro[0][i] == quadro[1][i] == quadro[2][i]:
+            print(f"jogador {quadro[0][i]} venceu!")
+            return True
+    if quadro[0][0] in ['x', 'o'] and quadro[0][0] == quadro[1][1] == quadro[2][2]:
+            print(f"jogador {quadro[0][0]} venceu!")
+            return True
+    if quadro[0][2] in ['x', 'o'] and quadro[0][2] == quadro[1][1] == quadro[2][0]:
+            print(f"jogador {quadro[0][2]} venceu!")
+            return True
+    else:
+         return False
+
