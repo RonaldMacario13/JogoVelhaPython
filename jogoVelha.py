@@ -51,3 +51,18 @@ def receber_jogada(jogador):
         status = jogada(linha, coluna, jogador)
     print("Jogada realizada!!")
 
+quadro = criar_quadro()
+existe_vencedor = False
+for i in range(9):
+    if i % 2 == 0:
+        receber_jogada('x')
+    else:
+        receber_jogada('o')
+
+    if i > 3:
+        existe_vencedor = verifcar_vencendor()
+        if existe_vencedor:
+            break
+
+if not existe_vencedor:
+    print("Deu velha!")
