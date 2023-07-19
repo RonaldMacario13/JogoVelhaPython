@@ -1,3 +1,8 @@
+def mostrar_quadro(quadro):
+    for linha in quadro:
+        print("|".join(linha))
+
+
 def criar_quadro():
     quadro_linha = [["_", "_", "_"], ["_", "_", "_"], [" ", " ", " "]]
     mostrar_quadro(quadro_linha)
