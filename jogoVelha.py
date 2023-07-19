@@ -12,3 +12,13 @@ def criar_quadro():
 #     for linha in quadro_atualizado:
 #         print("|".join(linha))
 
+def jogada(pos_i, pos_j, jogador = 'x'):
+    global quadro
+    if quadro [pos_i][pos_j] in ['_', ' ']:
+        quadro [pos_i][pos_j] = jogador
+        mostrar_quadro(quadro)
+        return True
+    else:
+        print("Posição está ocupada! Tente novamente.")
+        return False
+
